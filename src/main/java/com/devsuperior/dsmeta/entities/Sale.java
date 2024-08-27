@@ -18,9 +18,11 @@ public class Sale {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private Integer visited;
+	
 	private Integer deals;
 	private Double amount;
 	private LocalDate date;
+
 	
 	@ManyToOne
 	@JoinColumn(name = "seller_id")
@@ -76,4 +78,7 @@ public class Sale {
 	public void setSeller(Seller seller) {
 		this.seller = seller;
 	}
+
+
+
 }
